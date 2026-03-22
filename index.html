@@ -380,6 +380,88 @@
 </head>
 <body>
 
+
+
+
+ /* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 16px 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  /* Stack layout */
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .left-col {
+    border-right: none;
+    border-bottom: 1px solid rgba(184,150,90,0.25);
+    padding: 24px 20px;
+    align-items: center;
+  }
+
+  .right-col {
+    padding: 24px 20px;
+  }
+
+  /* Header scaling */
+  .header {
+    padding: 30px 20px 24px;
+  }
+
+  .main-name {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .name-line {
+    max-width: 60px;
+  }
+
+  /* Photo smaller */
+  .photo-frame {
+    max-width: 220px;
+  }
+
+  /* Family grid becomes single column */
+  .family-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .family-card {
+    max-width: 100% !important;
+  }
+
+  /* Tags center */
+  .tags-row {
+    justify-content: center;
+  }
+
+  /* Reduce text slightly */
+  .detail-label,
+  .detail-value {
+    font-size: 12px;
+  }
+
+  .edu-degree {
+    font-size: 12.5px;
+  }
+
+  /* Footer padding */
+  .footer {
+    padding: 12px 20px;
+  }
+}
+
+  
 <!-- SVG corner decorations -->
 <svg style="display:none">
   <defs>
