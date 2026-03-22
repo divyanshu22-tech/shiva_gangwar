@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiva Gangwar — Biodata</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fdf6ee;
+    --blush: #f2cfc4;
+    --rose: #c9837a;
+    --deep-rose: #9e4f4a;
+    --gold: #b8965a;
+    --gold-light: #d4ae72;
+    --warm-brown: #6b3f2e;
+    --text-dark: #3a2318;
+    --text-mid: #5c3828;
+    --text-light: #8a5c47;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8d5c4;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 30px 16px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .card {
+    width: 860px;
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 80px rgba(80, 30, 10, 0.25);
+  }
+
+  /* ── Decorative SVG corners ── */
+  .corner {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .corner.tl { top: 0; left: 0; }
+  .corner.tr { top: 0; right: 0; transform: scaleX(-1); }
+  .corner.bl { bottom: 0; left: 0; transform: scaleY(-1); }
+  .corner.br { bottom: 0; right: 0; transform: scale(-1); }
+
+  /* ── Header ── */
+  .header {
+    padding: 46px 60px 36px;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid rgba(184,150,90,0.3);
+  }
+
+  .name-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 6px;
+  }
+
+  .name-line {
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold));
+  }
+  .name-line.right {
+    background: linear-gradient(to left, transparent, var(--gold));
+  }
+
+  .main-name {
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: var(--warm-brown);
+    letter-spacing: 4px;
+    line-height: 1.1;
+  }
+
+  .name-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-top: 6px;
+  }
+
+  /* ── Body layout ── */
+  .body {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0;
+  }
+
+  /* ── Left column ── */
+  .left-col {
+    padding: 32px 24px 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-right: 1px solid rgba(184,150,90,0.25);
+    background: linear-gradient(160deg, rgba(242,207,196,0.15) 0%, transparent 60%);
+  }
+
+  .photo-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/4;
+  }
+
+  .photo-border-outer {
+    position: absolute;
+    inset: -6px;
+    border: 1.5px solid var(--gold-light);
+    opacity: 0.6;
+  }
+
+  .photo-border-inner {
+    position: absolute;
+    inset: -2px;
+    border: 1px solid var(--blush);
+  }
+
+  .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .photo-caption {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.7;
+    padding: 0 4px;
+    border-top: 1px solid rgba(184,150,90,0.25);
+    padding-top: 16px;
+  }
+
+  /* Contact box in left col */
+  .contact-box {
+    background: linear-gradient(135deg, var(--warm-brown), var(--deep-rose));
+    border-radius: 2px;
+    padding: 16px 18px;
+    color: white;
+  }
+  .contact-box .sec-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .contact-box .contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 12.5px;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.5;
+  }
+  .contact-box .contact-row:last-child { margin-bottom: 0; }
+  .contact-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--gold-light);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── Right column ── */
+  .right-col {
+    padding: 32px 36px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  /* ── Section styles ── */
+  .section { }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .section-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--warm-brown);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: var(--cream);
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 12.5px;
+    letter-spacing: 2px;
+    color: var(--warm-brown);
+    font-weight: 500;
+    flex: 1;
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(184,150,90,0.4), transparent);
+  }
+
+  /* ── Detail rows ── */
+  .detail-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 7px 0;
+    padding-left: 4px;
+  }
+
+  .detail-row {
+    display: contents;
+  }
+
+  .detail-label {
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--text-mid);
+    padding-right: 6px;
+    white-space: nowrap;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .detail-label svg {
+    width: 13px; height: 13px;
+    fill: var(--gold);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .detail-label span { font-weight: 600; }
+
+  .detail-value {
+    font-size: 12.5px;
+    color: var(--text-dark);
+    line-height: 1.5;
+  }
+  .detail-value::before {
+    content: ": ";
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  /* Education entries */
+  .edu-entry {
+    margin-bottom: 12px;
+    padding-left: 12px;
+    border-left: 2px solid var(--blush);
+  }
+  .edu-entry:last-child { margin-bottom: 0; }
+  .edu-degree {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+  }
+  .edu-inst {
+    font-size: 12px;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  /* Family grid */
+  .family-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+  }
+
+  .family-card {
+    background: rgba(242,207,196,0.2);
+    border: 1px solid rgba(184,150,90,0.2);
+    border-radius: 2px;
+    padding: 10px 12px;
+  }
+  .family-card .fc-role {
+    font-size: 10.5px;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    margin-bottom: 3px;
+    display: block;
+  }
+  .family-card .fc-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+  }
+  .family-card .fc-detail {
+    font-size: 11.5px;
+    color: var(--text-light);
+    font-style: italic;
+  }
+
+  /* Interests */
+  .tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-left: 4px;
+  }
+  .tag {
+    background: rgba(184,150,90,0.12);
+    border: 1px solid rgba(184,150,90,0.35);
+    padding: 5px 14px;
+    font-size: 12px;
+    color: var(--warm-brown);
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Partner pref */
+  .pref-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 1.8;
+    padding-left: 12px;
+    border-left: 2px solid var(--blush);
+    font-style: italic;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    border-top: 1px solid rgba(184,150,90,0.3);
+    padding: 14px 60px;
+    text-align: center;
+    background: linear-gradient(to right, transparent, rgba(184,150,90,0.08), transparent);
+  }
+  .footer-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gold);
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .card { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG corner decorations -->
+<svg style="display:none">
+  <defs>
+    <symbol id="corner-svg" viewBox="0 0 160 160">
+      <path d="M10,10 Q10,80 80,80 Q10,80 10,150" fill="none" stroke="#b8965a" stroke-width="1.2"/>
+      <circle cx="10" cy="10" r="4" fill="#b8965a"/>
+      <path d="M30,10 Q30,60 80,60" fill="none" stroke="#c9837a" stroke-width="0.8" opacity="0.5"/>
+      <circle cx="80" cy="20" r="6" fill="none" stroke="#b8965a" stroke-width="1"/>
+      <path d="M10,30 Q50,30 50,80" fill="none" stroke="#c9837a" stroke-width="0.8" opacity="0.4"/>
+      <circle cx="55" cy="10" r="3" fill="#d4ae72" opacity="0.6"/>
+      <circle cx="10" cy="55" r="3" fill="#d4ae72" opacity="0.6"/>
+      <!-- floral petal shapes -->
+      <ellipse cx="90" cy="18" rx="8" ry="14" fill="rgba(201,131,122,0.18)" transform="rotate(30 90 18)"/>
+      <ellipse cx="100" cy="30" rx="7" ry="12" fill="rgba(201,131,122,0.14)" transform="rotate(60 100 30)"/>
+      <ellipse cx="18" cy="90" rx="8" ry="14" fill="rgba(201,131,122,0.18)" transform="rotate(-30 18 90)"/>
+      <ellipse cx="30" cy="100" rx="7" ry="12" fill="rgba(201,131,122,0.14)" transform="rotate(-60 30 100)"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="card">
+
+  <!-- Corner decorations -->
+  <svg class="corner tl"><use href="#corner-svg"/></svg>
+  <svg class="corner tr"><use href="#corner-svg"/></svg>
+  <svg class="corner bl"><use href="#corner-svg"/></svg>
+  <svg class="corner br"><use href="#corner-svg"/></svg>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="name-ornament">
+      <div class="name-line"></div>
+      <div class="main-name">SHIVA GANGWAR</div>
+      <div class="name-line right"></div>
+    </div>
+    <div class="name-sub"></div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
+
+      <!-- Photo -->
+      <div class="photo-frame">
+        <div class="photo-border-outer"></div>
+        <div class="photo-border-inner"></div>
+        <img src="C:\Users\rajul\Downloads\Shiva.JPG" alt="Shiva Gangwar"
+             style="object-position: 62% top; "
+             onerror="this.style.background='#e8d5c4'; this.alt='Photo'; this.style.height='100%'">
+      </div>
+
+      <div class="photo-caption">
+        "A blend of tradition,<br>education, and modern values."
+      </div>
+
+      <!-- Contact -->
+      <div class="contact-box">
+        <span class="sec-label">CONTACT</span>
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.4 11.4 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.4 11.4 0 00.57 3.57 1 1 0 01-.25 1.01l-2.2 2.21z"/></svg>
+          9456382511
+        </div>
+        <div class="contact-row">
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+          Ward No. 10, Supriya Colony, Sitarganj, Uttarakhand
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+
+      <!-- PERSONAL DETAILS -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+          </div>
+          <span class="section-title">PERSONAL DETAILS</span>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-label"><svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12z"/></svg><span>Name</span></div>
+          <div class="detail-value">Shiva Gangwar</div>
+
+          <div class="detail-label"><svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg><span>Date of Birth</span></div>
+          <div class="detail-value">07 October 1999</div>
+
+          <div class="detail-label"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 100 10A5 5 0 0012 2zm0 7a2 2 0 110-4 2 2 0 010 4z"/></svg><span>Gender</span></div>
+          <div class="detail-value">Female</div>
+
+          <div class="detail-label"><svg viewBox="0 0 24 24"><path d="M7 17h2v-6H7v6zm4 0h2V7h-2v10zm4 0h2v-4h-2v4z"/></svg><span>Height</span></div>
+          <div class="detail-value">5 feet</div>
+
+          <div class="detail-label"><svg viewBox="0 0 24 24"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z"/></svg><span>Religion</span></div>
+          <div class="detail-value">Hindu</div>
+
+          <div class="detail-label"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3z"/></svg><span>Caste</span></div>
+          <div class="detail-value">Kurmi</div>
+
+          <div class="detail-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg><span>Colour</span></div>
+          <div class="detail-value">Very Fair</div>
+        </div>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+          </div>
+          <span class="section-title">EDUCATIONAL QUALIFICATION</span>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-degree">Pursuing Ph.D. in Mathematics</div>
+          <div class="edu-inst">NIT Allahabad</div>
+        </div>
+        <div class="edu-entry">
+          <div class="edu-degree">MSc Maths &amp; BSc Maths (Hons)</div>
+          <div class="edu-inst">Delhi University</div>
+        </div>
+      </div>
+
+      <!-- FAMILY DETAILS -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          </div>
+          <span class="section-title">FAMILY DETAILS</span>
+          <div class="section-rule"></div>
+        </div>
+
+        <div class="family-grid">
+          <div class="family-card">
+            <span class="fc-role">FATHER</span>
+            <div class="fc-name">Ramesh Chandra</div>
+            <div class="fc-detail">Retired Government Teacher</div>
+          </div>
+          <div class="family-card">
+            <span class="fc-role">MOTHER</span>
+            <div class="fc-name">Shobha Gangwar</div>
+            <div class="fc-detail">Homemaker</div>
+          </div>
+          <div class="family-card">
+            <span class="fc-role">ELDER SISTER</span>
+            <div class="fc-name">Rajul Gangwar</div>
+            <div class="fc-detail">MBA, IIM Calcutta</div>
+          </div>
+          <div class="family-card">
+            <span class="fc-role">SISTER's HUSBAND</span>
+            <div class="fc-name">Divyanshu Patel</div>
+            <div class="fc-detail">B.Tech, IIT Kanpur</div>
+          </div>
+          <div class="family-card" style="grid-column: 1/-1; max-width: 50%;">
+            <span class="fc-role">YOUNGER BROTHER</span>
+            <div class="fc-name">Akhand Gangwar</div>
+            <div class="fc-detail">B.Tech, NIT Surat</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LIFESTYLE & INTERESTS -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <span class="section-title">LIFESTYLE &amp; INTERESTS</span>
+          <div class="section-rule"></div>
+        </div>
+        <div class="tags-row">
+          <span class="tag">✏️ Sketching</span>
+          <span class="tag">✈️ Travelling</span>
+          <span class="tag">🎬 Movies</span>
+        </div>
+      </div>
+
+      <!-- PARTNER PREFERENCES -->
+      <div class="section">
+        <div class="section-header">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <span class="section-title">PARTNER PREFERENCES</span>
+          <div class="section-rule"></div>
+        </div>
+        <p class="pref-text">Looking for a well-educated, caring and understanding partner with good family values.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="footer-text">✦ &nbsp; With Blessings &nbsp; ✦</span>
+  </div>
+
+</div>
+
+</body>
+</html>
